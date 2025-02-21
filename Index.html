@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Portfolio</title>
+  
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- FontAwesome for icons -->
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  
+  <!-- Link to external CSS -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="relative text-white">
+
+  <!-- Header -->
+  <header class="header fixed w-full bg-black bg-opacity-50 p-4 top-0 z-50">
+    <nav class="container mx-auto flex justify-between items-center">
+      <h1 class="text-2xl font-bold">My Portfolio</h1>
+      <!-- Mobile Menu Toggle -->
+      <button id="menu-btn" class="md:hidden text-white focus:outline-none">
+        <i class="fas fa-bars text-2xl"></i>
+      </button>
+      <ul id="menu" class="hidden md:flex space-x-6">
+        <li><a href="#home" class="hover:text-yellow-400 transition">Home 🏡</a></li>
+        <li><a href="#about" class="hover:text-yellow-400 transition">About 😎</a></li>
+        <li><a href="#projects" class="hover:text-yellow-400 transition">Projects 🧾</a></li>
+        <li><a href="#contact" class="hover:text-yellow-400 transition">Contact 📳</a></li>
+      </ul>
+    </nav>
+    <!-- Mobile Menu -->
+    <ul id="mobile-menu" class="hidden md:hidden bg-black bg-opacity-80 w-full text-center mt-2 space-y-4 py-4">
+      <li><a href="#home" class="block hover:text-yellow-400 transition">Home 🏡</a></li>
+      <li><a href="#about" class="block hover:text-yellow-400 transition">About 😎</a></li>
+      <li><a href="#projects" class="block hover:text-yellow-400 transition">Projects 🧾</a></li>
+      <li><a href="#contact" class="block hover:text-yellow-400 transition">Contact 📳</a></li>
+    </ul>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero min-h-screen flex items-center justify-center px-4 text-center relative">
+    <div class="hero-content z-10 max-w-3xl">
+      <!-- Badge: Hello, I'm -->
+      <div class="inline-flex items-center space-x-2 bg-white bg-opacity-10 px-4 py-2 rounded-full mb-6">
+        <span class="text-yellow-400 text-xl">🔥</span>
+        <span class="text-white font-medium">Hello, I'm</span>
+      </div>
+      
+      <!-- Name & Title -->
+      <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold mb-2">Priyanshu Kumar</h1>
+      <h2 class="text-2xl sm:text-3xl md:text-4xl text-blue-400 font-semibold mb-4">Frontend Web Developer</h2>
+      
+      <!-- Short Intro -->
+      <p class="text-gray-300 mb-8">
+        Building scalable and secure web applications with modern technologies.  
+        Passionate about creating efficient, user-friendly solutions.
+      </p>
+      
+      <!-- Hero Buttons -->
+      <div class="flex flex-wrap justify-center gap-4">
+          <a 
+            href="https://github.com/priyanshu494mishra" 
+            class="hero-btn bg-gray-800 hover:bg-gray-900 text-white">
+            GitHub
+          </a>
+          <a 
+            href="https://www.linkedin.com/in/priyanshu0494" 
+            class="hero-btn bg-blue-500 hover:bg-blue-600 text-white">
+            LinkedIn
+          </a>
+          <a 
+            href="CV.pdf" download="Priyanshu_Kumar_CV.pdf" class="hero-btn bg-green-600 hover:bg-green-700 text-white">
+            Download CV
+          </a>
+      </div>
+    </div>
+  </section>
+   
+  <!-- About Section -->
+  <section id="about" class="py-20 text-center px-4">
+    <h2 class="text-4xl font-semibold mb-4">About Me</h2>
+    <p class="max-w-3xl mx-auto text-lg text-gray-300">
+      I specialize in building modern web experiences using HTML, CSS, JavaScript, Tailwind CSS, and GSAP for smooth animations. 
+      My focus is on clean design and intuitive user interfaces.  
+      <br/><br/>
+      I love tackling new challenges and delivering robust, user-centric products.
+    </p>
+  </section>
+
+ <!-- Projects Section -->
+<section id="projects" class="py-20 text-center px-4 bg-gray-900">
+    <h2 class="text-4xl font-semibold mb-4">Projects</h2>
+    <p class="text-gray-300 max-w-2xl mx-auto">
+      Below are a few notable projects I've worked on recently.  
+      Feel free to check out the code or view the live demos.
+    </p>
+  
+    <!-- Cards Container -->
+    <div class="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+  
+      <!-- Project Card 1 -->
+      <div class="bg-gray-800 rounded-lg p-6 hover:shadow-xl transition flex flex-col">
+        <!-- Project Image -->
+        <div class="h-48 bg-gray-700 mb-4 rounded flex items-center justify-center">
+          <!-- Replace with a real project screenshot or icon -->
+          <span class="text-2xl text-gray-400">Project Image</span>
+        </div>
+        
+        <!-- Project Title -->
+        <h3 class="text-2xl font-semibold text-white mb-2">Feed-Wall</h3>
+        
+        <!-- Project Description -->
+        <p class="text-gray-300 mb-4">
+          A platform to collect, manage, and analyze user feedback with AI-powered insights and real-time updates.
+        </p>
+  
+        <!-- Tech Stack (Badges) -->
+        <div class="flex flex-wrap gap-2 mb-4 justify-center">
+          <span class="tech-badge">Next.js</span>
+          <span class="tech-badge">TailwindCSS</span>
+          <span class="tech-badge">TypeScript</span>
+          <span class="tech-badge">Prisma</span>
+          <span class="tech-badge">PostgreSQL</span>
+        </div>
+  
+        <!-- Action Buttons -->
+        <div class="mt-auto flex justify-center gap-3">
+          <a 
+            href="#"
+            class="project-btn bg-blue-600 hover:bg-blue-700">
+            Live Demo
+          </a>
+          <a 
+            href="#"
+            class="project-btn bg-gray-700 hover:bg-gray-800">
+            Code
+          </a>
+        </div>
+      </div>
+      
+      <!-- Project Card 2 -->
+      <div class="bg-gray-800 rounded-lg p-6 hover:shadow-xl transition flex flex-col">
+        <div class="h-48 bg-gray-700 mb-4 rounded flex items-center justify-center">
+          <span class="text-2xl text-gray-400">Project Image</span>
+        </div>
+        <h3 class="text-2xl font-semibold text-white mb-2">UI-Unify</h3>
+        <p class="text-gray-300 mb-4">
+          A multi-platform integration bridging multiple UI libraries into one single, consistent interface.
+        </p>
+        <div class="flex flex-wrap gap-2 mb-4 justify-center">
+          <span class="tech-badge">Next.js</span>
+          <span class="tech-badge">TailwindCSS</span>
+          <span class="tech-badge">TypeScript</span>
+          <span class="tech-badge">Gemini API</span>
+          <span class="tech-badge">Framer Motion</span>
+        </div>
+        <div class="mt-auto flex justify-center gap-3">
+          <a 
+            href="#"
+            class="project-btn bg-blue-600 hover:bg-blue-700">
+            Live Demo
+          </a>
+          <a 
+            href="#"
+            class="project-btn bg-gray-700 hover:bg-gray-800">
+            Code
+          </a>
+        </div>
+      </div>
+  
+      <!-- Project Card 3 -->
+      <div class="bg-gray-800 rounded-lg p-6 hover:shadow-xl transition flex flex-col">
+        <div class="h-48 bg-gray-700 mb-4 rounded flex items-center justify-center">
+          <span class="text-2xl text-gray-400">Project Image</span>
+        </div>
+        <h3 class="text-2xl font-semibold text-white mb-2">FlowPay</h3>
+        <p class="text-gray-300 mb-4">
+          A payment system that streamlines real-time transaction tracking and simplifies financial management.
+        </p>
+        <div class="flex flex-wrap gap-2 mb-4 justify-center">
+          <span class="tech-badge">Next.js</span>
+          <span class="tech-badge">TailwindCSS</span>
+          <span class="tech-badge">Docker</span>
+          <span class="tech-badge">AWS</span>
+        </div>
+        <div class="mt-auto flex justify-center gap-3">
+          <a 
+            href="#"
+            class="project-btn bg-blue-600 hover:bg-blue-700">
+            Live Demo
+          </a>
+          <a 
+            href="#"
+            class="project-btn bg-gray-700 hover:bg-gray-800">
+            Code
+          </a>
+        </div>
+      </div>
+  
+    </div>
+  </section>
+  
+  <!-- Contact Section (two-column layout) -->
+  <section id="contact" class="py-10 px-4">
+    <div class="max-w-6xl mx-auto">
+      <!-- Heading -->
+      <div class="text-center mb-8">
+        <h2 class="text-3xl font-semibold mb-2">Contact Me</h2>
+        <p class="text-gray-300">Feel free to reach out to me!</p>
+      </div>
+      
+      <!-- Grid Layout for Contact -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        
+        <!-- Left: Email & Social -->
+        <div class="space-y-6">
+          <!-- Email Card -->
+          <div class="contact-card">
+            <h3 class="contact-title">
+              <i class="fas fa-envelope text-blue-600"></i>
+              <span>📧 Email</span>
+            </h3>
+            <p class="text-gray-300">
+              <a href="mailto:priyanshu00494@gmail.com" class="text-blue-400 hover:underline">
+                priyanshu00494@gmail.com
+              </a>
+            </p>
+          </div>
+          
+          <!-- Social Card -->
+          <div class="contact-card">
+            <h3 class="contact-title">
+              <i class="fas fa-users text-blue-600"></i>
+              <span>Social</span>
+            </h3>
+            <p class="text-gray-300 mb-4">Connect with me on social media:</p>
+            <div class="flex space-x-2">
+              <a href="https://www.linkedin.com/in/priyanshu0494" class="social-btn bg-blue-500 hover:bg-blue-600">
+                LinkedIn
+              </a>
+              <a href="https://github.com/priyanshu494mishra" class="social-btn bg-gray-800 hover:bg-gray-900">
+                GitHub
+              </a>
+              <a href="https://www.instagram.com/brahmanpriyanshu_" class="social-btn bg-blue-400 hover:bg-blue-500">
+                Instagram
+              </a>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Right: Send a Message Form -->
+        <div class="contact-card">
+          <h3 class="contact-title">
+            <i class="fas fa-paper-plane text-blue-600"></i>
+            <span>Send a Message</span>
+          </h3>
+          
+          <form action="#" method="POST" class="space-y-4 mt-4">
+            <!-- Name Field -->
+            <div>
+              <label for="name" class="block text-gray-200 font-medium mb-1">Your Name</label>
+              <input 
+                type="text" 
+                id="name" 
+                name="name" 
+                class="contact-input"
+                placeholder="Enter your name"
+              />
+            </div>
+            
+            <!-- Email Field -->
+            <div>
+              <label for="email" class="block text-gray-200 font-medium mb-1">Your Email</label>
+              <input 
+                type="email" 
+                id="email" 
+                name="email" 
+                class="contact-input"
+                placeholder="Enter your email"
+              />
+            </div>
+            
+            <!-- Message Field -->
+            <div>
+              <label for="message" class="block text-gray-200 font-medium mb-1">Your Message</label>
+              <textarea
+                id="message" 
+                name="message" 
+                rows="4" 
+                class="contact-input"
+                placeholder="Enter your message here..."
+              ></textarea>
+            </div>
+            
+            <!-- Submit Button -->
+            <button 
+              type="submit" 
+              class="bg-blue-600 text-white font-bold px-6 py-2 rounded-md hover:bg-blue-700 transition"
+            >
+              Send Message
+            </button>
+          </form>
+        </div>
+        
+      </div>
+    </div>
+  </section>
+  
+  <!-- Footer -->
+  <footer class="footer w-full p-4 text-center text-yellow-300">
+    <p>&copy; 2025 My Portfolio. All Rights Reserved.</p>
+  </footer>
+  
+  <!-- Link to external JS -->
+  <script src="script.js"></script>
+</body>
+</html>
